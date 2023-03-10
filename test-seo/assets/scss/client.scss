@@ -1,0 +1,395 @@
+.baniere {
+    height: 75px;
+    background: -webkit-linear-gradient(60deg, $blue, $sea);
+    margin-top: 2em;
+    &__title {
+        position: relative;
+        top: -5%;
+        font-size: $titre;
+        font-weight: bold;
+        font-family: $fontFamilyTitre;
+        color: $nav;
+        position: relative;
+        // top: 40%;
+    }
+}
+
+.content {
+    text-align: center;
+    margin-top: 5em;
+
+    &__title {
+        margin-bottom: .5em;
+        position: relative;
+        top: -5%;
+        font-size: $titreBold;
+        font-weight: bold;
+        color: $sea;
+        font-family: $fontFamilyTitre;
+    }
+}
+.clients{
+    margin: 0 auto;
+    position: relative;
+    &__content{
+        text-align: center;
+    }
+    &__images{
+        position: relative;
+        // left: 50%;
+        top: 50%;
+        // transform: translate(-50%,-50%);
+        width: 150px;
+    }
+}
+.web{
+    display: block;
+}
+.mob{
+    display: none;
+}
+@media screen and (max-width: $xs) {
+    .baniere {
+        height: 75px;
+    
+        &__title {
+            position: relative;
+            font-size: $parap;
+            top: 0 !important;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 3em;
+    
+        &__title {
+            font-size: $parap;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+    .web{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
+}
+@media screen and (max-width: 376px) {
+    .baniere {
+            height: 75px;
+    
+        &__title {
+            position: relative;
+            font-size: $parap;
+            top: 0 !important;
+            padding: 0 5px;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 2em;
+    
+        &__title {
+            font-size: $parap;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+    .web{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
+}
+@media screen and (max-width: $sm) {
+    .baniere {
+            height: 75px;
+    
+        &__title {
+            position: relative;
+            font-size: $parap;
+            top: 15%;
+            padding: 0 5px;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 2em;
+    
+        &__title {
+            font-size: $parap;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+    .web{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
+}
+@media screen and (min-width: $sm) and (max-width: $med) {
+    .baniere {
+            height: 75px;
+    
+        &__title {
+            position: relative;
+            font-size: $parap;
+            top: 0%;
+            padding: 0 5px;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 2em;
+    
+        &__title {
+            font-size: $parap;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+}
+@media screen and (min-width: $med) and (max-width: $lg) {
+    .baniere {
+            height: 75px;
+    
+        &__title {
+            position: relative;
+            font-size: $parap;
+            top: 15%;
+            padding: 0 5px;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 2em;
+    
+        &__title {
+            font-size: $parap;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+}
+@media screen and (min-width: $lg) and (max-width: $xl) {
+    .baniere {
+        height: 75px;
+    
+        &__title {
+            position: relative;
+            font-size: $titre;
+            padding: 0 5px;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 2em;
+    
+        &__title {
+            font-size: $titreBold;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+}
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+    .baniere {
+        height: 75px;
+    
+        &__title {
+            position: relative;
+            font-size: $titre;
+            padding: 0 5px;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 2em;
+    
+        &__title {
+            font-size: $titreBold;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+}
+@media screen and (min-width: $xxl) {
+    .baniere {
+        height: 75px;
+
+    
+        &__title {
+            position: relative;
+            font-size: $titre;
+            padding: 0 5px;
+        }
+    }
+    
+    .content {
+        text-align: center;
+        margin-top: 2em;
+    
+        &__title {
+            font-size: $titreBold;
+            padding: 0 !important;
+        }
+    }
+    .clients{
+        padding: 0;
+        position: relative;
+    
+        &__content{
+            display: flex;
+            padding: 0 3em;
+            align-items: center;
+            justify-content: center;
+        }
+        &__images{
+            width: 110px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .clients__images {
+        position: relative;
+        left: 0;
+        top: 0%;
+        transform: translate(0%, 0%);
+        width: 150px;
+    }
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 20s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 4))}
+}
+
+
+// Styling
+.slider {
+	background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 150px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 900; /* largeur de 5 logos */
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 5); /* largeur de 5 logos x 4 sliders */
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+}

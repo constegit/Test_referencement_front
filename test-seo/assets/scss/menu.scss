@@ -1,0 +1,760 @@
+.header {
+    position: sticky;
+    width: 100%;
+    z-index: 7;
+    top: 0;
+    background: #013B5B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 54px;
+    color: white !important;
+    padding: 12px 8px;
+
+    &__icon {
+        font-size: 1.8em;
+        position: relative;
+        bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        padding-top: 5px;
+        margin-right: 10px;
+
+        &--facebook:hover {
+            color: $blue !important;
+            transition: ease .6s all;
+        }
+
+        &--twitter:hover {
+            color: $blue !important;
+            transition: ease .6s all;
+        }
+
+        &--linkedin:hover {
+            color: $blue !important;
+            transition: ease .6s all;
+        }
+
+        &--instagram:hover {
+            color: $blue !important;
+            transition: ease .6s all;
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-family: $fontFamilyMenu;
+    }
+
+    p {
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-right: 15px;
+        color: white;
+
+        a:hover {
+            color: white;
+        }
+    }
+}
+
+.header1 {
+    display: none;
+
+    &__icon {
+        font-size: 1.5em;
+        position: relative;
+        bottom: 5px;
+        cursor: pointer;
+        display: flex;
+    }
+
+    &__action {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+
+.logo {
+    /* height: 150px;
+    position: relative;
+    top: 37px;
+    left: 50px;*/
+    height: 150px;
+    position: relative;
+    top: -30px;
+    // background: white;
+    // background: linear-gradient(60deg, $black, $blue);
+    border-bottom-right-radius: 200px;
+    border-top-left-radius: 130px;
+    left: -18px;
+    padding: 5px 30px 6px 50px;
+    display: block;
+}
+
+.moblogo{
+    display: none;
+}
+
+ul.navbar-nav {
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-collapse {
+    padding: 0;
+}
+
+.navbar {
+    background-color: #f6f4ee;
+    position: sticky;
+    top: 54px;
+    width: 100%;
+    height: 53px;
+    z-index: 7;
+    align-items: center;
+    box-shadow: 0 0 17px -13px black;
+
+    .nav-link {
+        border-bottom: transparent 3px solid;
+        font-size: 12px;
+        padding-bottom: 0px;
+        color: $blackRoom;
+        text-transform: uppercase;
+        margin-right: 1.5em;
+        font-family: $fontFamilyMenu;
+
+        &:hover {
+            border-bottom: $sea 3px solid;
+            transition: ease 1s all;
+            color: $sea;
+        }
+
+        &:focus {
+            border-bottom: #2b499d 3px solid;
+            transition: ease 1s all;
+        }
+
+    }
+
+    router-link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+
+a.router-link-exact-active.button__cta--adherer{
+    display: none !important;
+    background-color: red;
+}
+
+a.router-link-exact-active.button__cta--decouvrer{
+    display: none !important;
+    background-color: red;
+}
+    .router-link-active  {
+        color: $sea;
+        border-bottom: $sea 3px solid;
+        padding-bottom: 0px;
+    }
+    
+    .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        border-radius: 0px;
+        padding: 0px 0px;
+        border: none;
+        border-bottom: 1px solid grey;
+        margin: 0;
+        background-color: $nav;
+        z-index: 999;
+        width: 250px;
+        position: relative;
+
+        .dropdown-item {
+            padding: 15px;
+            font-size: 14px;
+
+            &:hover {
+                background-color: $sea;
+                color: white !important;
+                transition: ease .5s all;
+                position: relative;
+            }
+
+            &--link {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+.text_login:hover {
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    color: white;
+    font-size: 12px;
+    background-color: #192733;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+}
+
+.hover-text:hover .tooltip-text {
+    visibility: visible;
+}
+
+#bottom {
+    top: 30px;
+    left: -25%;
+}
+
+.button_connexion1 {
+    border: 1px solid $nav;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 2px 13px;
+    box-shadow: none;
+    color: white;
+    border-radius: 20px;
+    bottom: 5px;
+    font-family: $fontFamilyMenu;
+    position: relative;
+    top: -18px;
+
+    &:hover {
+        transition: ease-in-out .5s all;
+        background: $nav;
+        border: 1px solid $nav;
+        color: $blue;
+    }
+}
+
+.button_connexion2 {
+    border: 1px solid $nav;
+    text-decoration: none;
+    padding: 2px 13px;
+    box-shadow: none;
+    color: white;
+    border-radius: 20px;
+    bottom: 5px;
+    font-family: $fontFamilyMenu;
+    position: relative;
+    top: -18px;
+
+    &:hover {
+        transition: ease-in-out .5s all;
+        background: $nav;
+        border: 1px solid $nav;
+        color: $blue;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .moblogo{
+        display: block;
+        height: 80px;
+        position: relative;
+        top: 0px;
+    }   
+    .logo {
+        display: none !important;
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .navbar-collapse {
+        background: $nav;
+    }
+
+    .navbar-collapse ul.navbar {
+        text-align: start;
+    }
+
+    ul.navbar-nav {
+        padding-bottom: 8px;
+        display: flex;
+        padding-left: 2em;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .header {
+        &__action {
+            display: flex;
+            flex-direction: row;
+            justify-content: center !important;
+            align-items: center;
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+
+    .header1 {
+        display: block;
+        margin-top: 1em;
+
+        &__icon {
+            font-size: 1.5em;
+        }
+    }
+
+    .button_connexion1 {
+        font-size: 10px;    
+        position: relative;
+            top: 0;
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+            position: relative;
+            top: 0;
+        }
+    }
+
+    .button_connexion2 {
+        font-size: 10px;
+        position: relative;
+            top: 0;
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .moblogo{
+        display: block;
+        height: 100px;
+        position: relative;
+        top: -5px;
+        background: none;
+        left: -18px;
+        padding: 5px 6px 12px 25px;
+    }   
+    .logo {
+        display: none !important;
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .navbar-collapse {
+        background: $nav;
+    }
+
+    .navbar-collapse ul.navbar {
+        text-align: start;
+    }
+
+    ul.navbar-nav {
+        padding-bottom: 8px;
+        display: flex;
+        padding-left: 2em;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .header {
+        &__action {
+            display: flex;
+            flex-direction: row;
+            justify-content: center !important;
+            align-items: center;
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+
+    .header1 {
+        display: block;
+        margin-top: 1em;
+
+        &__icon {
+            font-size: 1.5em;
+        }
+    }
+
+    .button_connexion1 {
+        font-size: 10px;
+        position: relative;
+            top: 0;
+
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+            
+        }
+    }
+
+    .button_connexion2 {
+        font-size: 10px;
+        position: relative;
+            top: 0;
+
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (min-width: $sm) and (max-width: $med) {
+    .moblogo{
+        display: block !important;
+        height: 100px;
+        position: relative;
+        top: -5px;
+        background: none;
+        left: -18px;
+        padding: 5px 6px 12px 25px;
+    }   
+    .logo {
+        display: none !important;
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .navbar-collapse {
+        background: $nav;
+    }
+
+    .navbar-collapse ul.navbar {
+        text-align: start;
+    }
+
+    ul.navbar-nav {
+        padding-bottom: 8px;
+        display: flex;
+        padding-left: 2em;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .header {
+        &__action {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end !important;
+            align-items: flex-end;
+        }
+    }
+
+    .button_connexion1 {
+        font-size: 10px;
+
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+
+    .button_connexion2 {
+        font-size: 10px;
+
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (min-width: $med) and (max-width: $lg) {
+    .moblogo{
+        display: block;
+        height: 100px;
+        position: relative;
+        top: -3px;
+        background: none;
+        left: -18px;
+        padding: 5px 6px 12px 25px;
+    }   
+    .logo {
+        display: none !important;
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .navbar-collapse {
+        background: $nav;
+    }
+
+    .navbar-collapse ul.navbar {
+        text-align: start;
+    }
+
+    ul.navbar-nav {
+        padding-bottom: 8px;
+        display: flex;
+        padding-left: 2em;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .header {
+        &__action {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end !important;
+            align-items: flex-end;
+        }
+    }
+
+    .button_connexion1 {
+        font-size: 10px;
+        position: relative;
+            top: -22px;
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+
+    .button_connexion2 {
+        font-size: 10px;
+        position: relative;
+            top: -22px;
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (min-width: $lg) and (max-width: $xl) {
+    .moblogo{
+        display: none !important;
+    }
+    .logo {
+        height: 94px;
+        position: relative;
+        top: -15px;
+        left: -17px;
+        padding: 5px 40px 12px 52px;
+    }
+
+    .navbar {
+        height: 40px;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .navbar-collapse {
+        background: $nav;
+    }
+
+    .navbar-collapse ul.navbar {
+        text-align: start;
+    }
+
+    ul.navbar-nav {
+        padding-bottom: 8px;
+        display: flex;
+        padding-left: 2em;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0;
+        font-size: 11px;
+    }
+
+    .header {
+        &__action {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end !important;
+            align-items: flex-end;
+        }
+    }
+
+    .button_connexion1 {
+        font-size: 10px;
+        position: relative;
+        top: -22px;
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+
+    .button_connexion2 {
+        font-size: 10px;
+        position: relative;
+        top: -22px;
+        &:hover {
+            transition: ease-in-out .5s all;
+            background: $nav;
+            border: 1px solid $nav;
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {
+    .logo {
+        /* height: 150px;
+        position: relative;
+        top: 37px;
+        left: 50px;*/
+        height: 110px;
+        position: relative;
+        top: -24px;
+        // background: white;
+        // background: linear-gradient(60deg, $black, $blue);
+        border-bottom-right-radius: 200px;
+        border-top-left-radius: 130px;
+        left: -18px;
+        padding: 5px 30px 6px 50px;
+        display: block;
+    }
+    
+    .moblogo{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: $xxl) {
+    .logo {
+        /* height: 150px;
+        position: relative;
+        top: 37px;
+        left: 50px;*/
+        height: 110px;
+        position: relative;
+        top: -24px;
+        // background: white;
+        // background: linear-gradient(60deg, $black, $blue);
+        border-bottom-right-radius: 200px;
+        border-top-left-radius: 130px;
+        left: -18px;
+        padding: 5px 30px 6px 50px;
+        display: block;
+    }
+    
+    .moblogo{
+        display: none !important;
+    }
+}
+
+
+// @media screen and (max-width: 1200px) {
+//     .logo{
+//         height: 140px;
+//         top: 25px;
+//     }
+//     .deco{
+//         top: 26px;
+//         height: 140px;
+//     }
+// }
+
+// @media screen and (max-width: 991px) {
+//     .logo{
+//         background-color: transparent;
+//         height: 87px;
+//         top: 0;
+//     }
+//     .deco{
+//        display: none;
+//     }
+// }

@@ -1,0 +1,76 @@
+$sea : #013B5B;
+$blue : #00398F;
+$nav : #f6f4ee;
+$black : #191315;
+$textRose : #191315;
+$blackRoom : #013B5B;
+// tailles
+$titreBold : 45px;
+$titre : 34px;
+$parap : 21px;
+$text : 18px;
+$textPetit : 16px;
+$buttonWidth : 350px;
+$buttonHeight : 53px;
+$paddingButton : 10px 35px;
+$buttonText : 21px;
+$buttonBorderRadius : 50px;
+// mobile
+$mobTitreBold : 34px;
+$mobTitre : 21px;
+$mobText : 18px;
+$mobTextPetit : 13px;
+$mobButtonWidth : 300px;
+$mobButtonHeight : 40px;
+$mobPaddingButton : 7px 25px;
+$mobButtonText : 16px;
+$mobButtonBorderRadius : 50px;
+// 
+$fontFamilyTitre : 'p22_mackinac_probook',
+ui-serif,
+Georgia,
+'Times New Roman',
+Times,
+serif !important;
+$fontFamilyTitreBold : 'p22_mackinac_probold',
+ui-serif,
+Georgia,
+'Times New Roman',
+Times,
+serif !important;
+// $fontFamilyTitre : 'roxborough_cflight', sans-serif !important;
+// $fontFamilyTitreBold : 'roxborough_cfbold', sans-serif !important;
+$fontFamilyText : 'metropolismedium',
+sans-serif !important;
+$fontFamilyTextLight : 'metropolislight',
+sans-serif !important;
+$fontFamilyTextLightItalic : 'metropolislight_italic',
+sans-serif !important;
+// $fontFamilyText : 'roxborough_cflight', sans-serif !important;
+$fontFamilyMenu : 'metropolismedium',
+sans-serif !important;
+$fontFamilyButton : 'metropolismedium',
+sans-serif !important;
+// min-width : au-dessus de ..px
+// max-width : au-dessous de ..px
+// média querys
+$xxl: 87.5em; // 1400 and hi-res desktop
+$xl: 75em; // 1200 and hi-res desktop
+$lg: 62em; // 992 and hi-res laptops
+$med: 48em; // 768 and hi-res laptops
+$sm: 28em; // 448 and hi-res laptops
+$xs: 20em; // 320 only
+
+@media screen and (max-width: $xs) {}
+
+@media screen and (max-width: $sm) {}
+
+@media screen and (min-width: $sm) and (max-width: $med) {}
+
+@media screen and (min-width: $med) and (max-width: $lg) {}
+
+@media screen and (min-width: $lg) and (max-width: $xl) {}
+
+@media screen and (min-width: $xl) and (max-width: $xxl) {}
+
+@media screen and (min-width: $xxl) {}

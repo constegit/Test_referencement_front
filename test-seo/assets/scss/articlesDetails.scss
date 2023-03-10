@@ -1,0 +1,277 @@
+$sea: #2b988d;
+$blue: #2b499d;
+$backWhite: #ffffff;
+
+.container {
+    overflow-x: hidden;
+}
+
+.titre {
+    margin-top: 4rem;
+    padding: 0 55px;
+
+    &__mini {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    &__articles {
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 1em;
+        background: -webkit-linear-gradient(60deg, $blue, $sea);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__back {
+        font-size: 14px;
+
+        &--lien {
+            color: $sea;
+            text-decoration: none;
+        }
+    }
+
+    &__details {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        padding: 7px 0px;
+
+        &--auteur {
+            border-right: 2px solid #000;
+            padding-right: 20px;
+        }
+
+        &--date {
+            padding-left: 20px;
+        }
+    }
+}
+
+.image {
+    &__textCategorie {
+        margin-left: 25px;
+        text-transform: capitalize;
+    }
+
+    &__iconTags {
+        position: relative;
+        top: 5px;
+    }
+
+    &__categorie {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+.image__populaire {
+    width: 120px;
+    height: 98px;
+}
+
+.titre__articlePopulaire {
+    font-weight: bold;
+}
+
+.date__pubArticle {
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.articlesPopulaires {
+    margin-top: 30px;
+}
+
+.limit-text-2 {
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.description h3 {
+    margin: 30px 0;
+}
+
+.card-text {
+    margin-bottom: 44px;
+}
+
+.cat {
+    margin-top: 63px;
+    border-left: 1px solid #d7d6d6;
+    padding-left: 43px;
+}
+
+.link_article {
+    text-decoration: none;
+    color: #323030;
+}
+
+.pl {
+    padding-left: 27px;
+}
+
+.descriptio {
+    padding-right: 45px;
+}
+
+.link-cat {
+    display: flex;
+    margin: 13px 0;
+    align-items: center;
+
+}
+
+img.image__categorie {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.image__iconTags {
+    position: relative;
+    top: 0px !important;
+}
+
+@media screen and (max-width: 1105px) {
+    .articlesPopulaires {
+        display: block !important;
+    }
+
+    .pl {
+        width: 100%;
+        padding: 14px 0 0 9px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .img-similaire {
+        height: 16vh;
+        overflow: hidden;
+        margin-bottom: 23px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .card-img-top {
+        margin: 15px 0 !important;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .titre {
+        padding: 0 15px;
+    }
+}
+
+
+
+@media screen and (max-width: $xs) {
+    .titre {
+        margin-top: 4rem;
+
+        &__mini {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        &__articles {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 1em;
+            background: -webkit-linear-gradient(60deg, $blue, $sea);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &__back {
+            font-size: 0.8em;
+
+            &--lien {
+                color: $sea;
+                text-decoration: none;
+            }
+        }
+
+        &__details {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            width: 50%;
+            padding: 7px 0px;
+
+            &--auteur {
+                border-right: 2px solid #000;
+                padding-right: 20px;
+            }
+
+            &--date {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $xs) and (max-width: $sm) {
+    .titre {
+        margin-top: 4rem;
+
+        &__mini {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        &__articles {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 1em;
+            background: -webkit-linear-gradient(60deg, $blue, $sea);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &__back {
+            font-size: 0.8em;
+
+            &--lien {
+                color: $sea;
+                text-decoration: none;
+            }
+        }
+
+        &__details {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            width: 50%;
+            padding: 7px 0px;
+
+            &--auteur {
+                border-right: 2px solid #000;
+                padding-right: 20px;
+            }
+
+            &--date {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $sm) and (max-width: $med) {}
+
+@media screen and (min-width: $med) and (max-width: $lg) {}
+
+@media screen and (min-width: $lg) and (max-width: $xl) {}
+
+@media screen and (min-width: $xl) {}
