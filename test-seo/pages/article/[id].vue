@@ -25,7 +25,8 @@ const { data: articles } = await useFetch(host + `/api/articles/${id}?populate[0
         <div class="row mb-5">
             <div class="col-md-8 titre">
                 <h5 class="titre__mini mb-4">
-                    REDÉFINIR LES SOINS DE SANTÉ POUR LA VIE MODERNE. de la vie
+                    REDÉFINIR LES SOINS DE SANTÉ POUR LA VIE MODERNE. de la vie 
+                    <!-- <font-awesome-icon icon="fa-solid fa-user-secret" /> -->
                 </h5>
                 <h1 class="titre__articles">
                     {{ articles.data.attributes.title }}

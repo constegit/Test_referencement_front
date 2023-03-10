@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     },
     css: [
         '~/assets/scss/style.scss',
+        '@fortawesome/fontawesome-svg-core/styles.css',
     ],
     app: {
         head: {
@@ -32,7 +33,10 @@ export default defineNuxtConfig({
                 {
                     src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
                     integrity: 'sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4',
-                    crossorigin: 'anonymous'
+                    crossorigin: 'anonymous',
+                },
+                {
+                    src: 'https://www.googletagmanager.com/gtag/js?id=G-W6WPMEPZT1',
                 }
             ],
         },
@@ -45,4 +49,7 @@ export default defineNuxtConfig({
             baseURL: process.env.BASE_URL || 'http://51.178.17.54:1337',
         }
     },
+    plugins: [
+        '~/plugins/google-analytics.js'
+    ]
 })
