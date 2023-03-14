@@ -10,17 +10,19 @@ const { data: articles } = await useFetch(host + `/api/articles/${id}?populate[0
 <template>
     <div class="container-fluid">
         <Head>
-            <Title>TEst page | {{ articles.data.attributes.seo.metaTitle }}</Title>
-            <Meta name="description" :content="articles.data.attributes.seo.metaDescription" />
-            <Meta :content="articles.data.attributes.seo.metaSocial[0].title" property="og:title" />
-            <Meta :content="articles.data.attributes.seo.metaSocial[0].description" property="og:description" />
-            <Meta :content="host + articles.data.attributes.seo.metaSocial[0].image.data.attributes.url" property="og:image" />
-            <Meta :content="articles.data.attributes.seo.metaSocial[1].title" property="twitter:title" />
-            <Meta :content="articles.data.attributes.seo.metaSocial[1].description" property="twitter:description" />
-            <Meta :content="host + articles.data.attributes.seo.metaSocial[1].image.data.attributes.url" property="twitter:image" />
+            <Title v-if="articles.data.attributes.seo.metaTitle != undefined" >TEst page | {{ articles.data.attributes.seo.metaTitle }}</Title>
+            <Meta v-if="articles.data.attributes.seo.metaDescription != undefined" name="description" :content="articles.data.attributes.seo.metaDescription" />
+            
+            <Meta v-if="articles.data.attributes.seo.metaSocial.length > 0" :content="articles.data.attributes.seo.metaSocial[0].title" property="og:title" />
+            <Meta v-if="articles.data.attributes.seo.metaSocial.length > 0" :content="articles.data.attributes.seo.metaSocial[0].description" property="og:description" />
+            <Meta v-if="articles.data.attributes.seo.metaSocial.length > 0" :content="host + articles.data.attributes.seo.metaSocial[0].image.data.attributes.url" property="og:image" />
+            <Meta v-if="articles.data.attributes.seo.metaSocial.length > 1" :content="articles.data.attributes.seo.metaSocial[1].title" property="twitter:title" />
+            <Meta v-if="articles.data.attributes.seo.metaSocial.length > 1" :content="articles.data.attributes.seo.metaSocial[1].description" property="twitter:description" />
+            <Meta v-if="articles.data.attributes.seo.metaSocial.length > 1" :content="host + articles.data.attributes.seo.metaSocial[1].image.data.attributes.url" property="twitter:image" />
             <Meta content="article" property="og:type"/>
-            <Meta :content="host + articles.data.attributes.seo.metaSocial[1].image.data.attributes.url" name="twitter:card" />
-            <link :href="articles.data.attributes.seo.canonicalURL" rel="canonical" />
+            <Meta v-if="articles.data.attributes.seo.metaSocial.length > 1" :content="host + articles.data.attributes.seo.metaSocial[1].image.data.attributes.url" name="twitter:card" />
+            <link v-if="articles.data.attributes.seo.canonicalURL != undefined" :href="articles.data.attributes.seo.canonicalURL" rel="canonical"  />
+            
         </Head> 
         <div class="row mb-5">
             <div class="col-md-8 titre">
@@ -28,8 +30,11 @@ const { data: articles } = await useFetch(host + `/api/articles/${id}?populate[0
                     REDÉFINIR LES SOINS DE SANTÉ POUR LA VIE MODERNE. de la vie 
                     <!-- <font-awesome-icon icon="fa-solid fa-user-secret" /> -->
                 </h5>
-                <h1 class="titre__articles">
+                <h1 class="titre__articles" v-if="articles.data.attributes.title != undefined">
                     {{ articles.data.attributes.title }}
+                </h1>
+                <h1 class="titre__articles" v-else>
+                    undefined
                 </h1>
                 <p class="titre__details">
                     <span class="titre__details--auteur">{{

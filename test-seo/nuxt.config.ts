@@ -1,3 +1,5 @@
+import { baseURL } from "nuxt/dist/core/runtime/nitro/paths"
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     vite: {
@@ -47,9 +49,30 @@ export default defineNuxtConfig({
         apiKey: '',
         public: {
             baseURL: process.env.BASE_URL || 'http://51.178.17.54:1337',
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000/',
         }
     },
     plugins: [
         '~/plugins/google-analytics.js'
-    ]
+    ],
+    modules: [
+        'nuxt-simple-sitemap',
+        'nuxt-simple-robots',
+    ],
+    nitro: {
+        prerender: {
+            crawlLinks: true,
+            routes: ['/'],
+            ignore: []
+        },
+    },
+    routeRules: {
+        // use the `index` shortcut for simple rules
+        '/secret/**': { index: false },
+        // add exceptions for individual routes
+        '/secret/visible': { index: true },
+        // use the `robots` rule if you need finer control
+        '/custom-robots': { robots: 'index, follow' },
+    }
+
 })

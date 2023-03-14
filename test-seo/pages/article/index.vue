@@ -12,7 +12,7 @@ useHead({
     meta: [
         { name: 'description', content: `Notre page d'article mag santé` }
     ],
-    script: [{ children: 'console.log(\'Hello world\')' }]
+    // script: [{ children: 'console.log(\'Hello world\')' }]
 }
 )
 </script>
