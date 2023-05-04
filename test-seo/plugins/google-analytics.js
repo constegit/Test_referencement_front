@@ -6,7 +6,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }
   gtag("js", new Date());
   gtag("config", "G-W6WPMEPZT1");
-  nuxtApp.router.afterEach((to, from) => {
+  nuxtApp.$router.afterEach((to, from) => {
     gtag("config", "G-W6WPMEPZT1", { page_path: to.fullPath });
   });
 });

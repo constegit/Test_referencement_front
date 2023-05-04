@@ -48,8 +48,8 @@ export default defineNuxtConfig({
     runtimeConfig: {
         apiKey: '',
         public: {
-            baseURL: process.env.BASE_URL || 'http://51.178.17.54:1337',
-            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000/',
+            baseURL: process.env.BASE_URL || `https://console.constellation-group.co`,
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || `http://localhost:3000/`
         }
     },
     plugins: [
